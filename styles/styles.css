@@ -134,24 +134,3 @@ footer {
     margin-top: 2rem;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .profile-box {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    main, aside {
-        float: none;
-        width: 100%;
-    }
-    
-    nav {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    
-    nav a {
-        text-align: center;
-    }
-}
