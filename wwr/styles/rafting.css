@@ -1,132 +1,117 @@
-/* rafting.css */
-
-/* CSS Variables */
-:root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --accent1-color: #e74c3c;
-    --accent2-color: #27ae60;
-    
-    --heading-font: 'Arial', sans-serif;
-    --body-font: 'Helvetica', sans-serif;
-}
-
-/* Reset */
+/* Reset everything */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Body Styles */
+/* Set up colors and fonts */
+:root {
+  --primary-color: #2c3e50;
+  --accent1-color: #e74c3c;
+  --heading-font: 'Arial', sans-serif;
+  --body-font: 'Helvetica', sans-serif;
+}
+
+/* Basic page styles */
 body {
-    font-family: var(--body-font);
-    color: var(--primary-color);
+  font-family: var(--body-font);
+  color: var(--primary-color);
 }
 
-/* Layout */
+/* Make page centered and 840px wide */
 header, main, footer {
-    width: 840px;
-    margin: 0 auto;
+  width: 840px;
+  margin: 0 auto;
 }
 
-/* Header Styles */
+/* Header styles */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--primary-color);
 }
 
 header img {
-    width: 100px;
-    height: auto;
-}
-
-nav {
-    display: flex;
-    gap: 2rem;
+  width: 100px;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
 }
 
-nav a:hover {
-    background-color: var(--secondary-color);
-}
-
-/* Heading Styles */
+/* Heading styles */
 h1, h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
+  font-family: var(--heading-font);
+  color: var(--primary-color);
 }
 
-/* Basic Element Styles */
+/* Basic spacing */
 nav, p, section, article {
-    margin: 16px;
-    padding: 8px;
+  margin: 16px;
+  padding: 8px;
 }
 
-/* Hero Section */
+/* Hero section - big image with text on top */
 .hero {
-    position: relative;
+  position: relative;
 }
 
 .hero img {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .hero h1 {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 16px;
-    text-align: center;
-    opacity: 0.7;
-    background-color: var(--accent1-color);
-    color: #fff;
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.7;
+  background-color: var(--accent1-color);
+  color: white;
 }
 
 .hero article {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 1rem;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
 }
 
 .hero article img {
-    float: right;
-    width: 125px;
+  float: right;
+  width: 125px;
 }
 
-/* Footer Styles */
+/* Footer styles */
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: var(--primary-color);
-    color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: white;
 }
 
 .socialmedia {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .socialmedia a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .socialmedia img {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
