@@ -8,7 +8,7 @@
 /* My color scheme and fonts */
 :root {
   --primary-color: #2c3e50;
-  --accent1-color: #e74c3c;
+  --accent1-color: #c0392b;
   --heading-font: 'Arial', sans-serif;
   --body-font: 'Helvetica', sans-serif;
 }
@@ -76,15 +76,15 @@ p, section, article {
   height: auto;
 }
 
-/* Company title overlay on hero image - FIXED CONTRAST */
+/* Company title overlay on hero image - USING ACCENT COLOR */
 .hero h1 {
   position: absolute;
   top: 20px;
   width: 100%;
   padding: 16px;
   text-align: center;
-  opacity: 0.9; /* Increased opacity for better contrast */
-  background-color: #c0392b; /* Darker red for better contrast */
+  opacity: 0.9;
+  background-color: var(--accent1-color); /* NOW USING THE VARIABLE */
   color: white;
 }
 
