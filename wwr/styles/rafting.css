@@ -1,11 +1,9 @@
-/* Reset all default margins and padding */
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* My color scheme and fonts */
 :root {
   --primary-color: #2c3e50;
   --accent1-color: #c0392b;
@@ -13,19 +11,16 @@
   --body-font: 'Helvetica', sans-serif;
 }
 
-/* Basic page style */
 body {
   font-family: var(--body-font);
   color: var(--primary-color);
 }
 
-/* Center the page content with fixed width */
 header, main, footer {
   width: 840px;
   margin: 0 auto;
 }
 
-/* Header layout with logo and navigation */
 header {
   display: flex;
   justify-content: space-between;
@@ -34,49 +29,41 @@ header {
   background-color: var(--primary-color);
 }
 
-/* Company logo size */
 header img {
   width: 100px;
 }
 
-/* Navigation menu layout */
 nav {
   display: flex;
   gap: 1rem;
 }
 
-/* Navigation links style */
 nav a {
   color: white;
   text-decoration: none;
   padding: 0.5rem 1rem;
 }
 
-/* Heading styles */
 h1, h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
 }
 
-/* Basic spacing for content sections */
 p, section, article {
   margin: 16px;
   padding: 8px;
 }
 
-/* Hero section with background image */
 .hero {
   position: relative;
 }
 
-/* Hero image fills the container */
 .hero img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-/* Company title overlay on hero image - USING ACCENT COLOR */
 .hero h1 {
   position: absolute;
   top: 20px;
@@ -84,11 +71,10 @@ p, section, article {
   padding: 16px;
   text-align: center;
   opacity: 0.9;
-  background-color: var(--accent1-color); /* NOW USING THE VARIABLE */
+  background-color: var(--accent1-color);
   color: white;
 }
 
-/* Mission statement box on hero image */
 .hero article {
   position: absolute;
   bottom: 20px;
@@ -98,13 +84,11 @@ p, section, article {
   padding: 1rem;
 }
 
-/* Happy client image floats to the right */
 .hero article img {
   float: right;
   width: 125px;
 }
 
-/* Footer layout */
 footer {
   display: flex;
   justify-content: space-between;
@@ -114,18 +98,15 @@ footer {
   color: white;
 }
 
-/* Social media icons layout */
 .socialmedia {
   display: flex;
   gap: 1rem;
 }
 
-/* Remove underline from social media links */
 .socialmedia a {
   text-decoration: none;
 }
 
-/* Social media icon size */
 .socialmedia img {
   width: 30px;
   height: 30px;
