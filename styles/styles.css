@@ -1,5 +1,4 @@
-﻿/* styles.css for Wisdom Muke's personal profile */
-
+﻿/* ===== RESET & BASE STYLES ===== */
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +15,7 @@ body {
     padding: 20px;
 }
 
+/* ===== HEADER & NAVIGATION ===== */
 header {
     background-color: #2c3e50;
     padding: 1rem;
@@ -23,10 +23,11 @@ header {
     border-radius: 8px;
 }
 
+/* FLEXBOX USAGE: Navigation menu - 1D layout (horizontal row) */
 nav {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+    display: flex; /* 🎯 FLEXBOX: Turns nav into flex container */
+    justify-content: space-evenly; /* 🎯 FLEXBOX: Spaces items evenly */
+    gap: 2rem; /* 🎯 FLEXBOX: Space between navigation items */
 }
 
 nav a {
@@ -41,10 +42,12 @@ nav a:hover {
     background-color: #3498db;
 }
 
+/* ===== PROFILE SECTION ===== */
+/* FLEXBOX USAGE: Profile box - 1D layout (image + text side by side) */
 .profile-box {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+    display: flex; /* 🎯 FLEXBOX: Aligns image and text horizontally */
+    align-items: center; /* 🎯 FLEXBOX: Centers items vertically */
+    gap: 2rem; /* 🎯 FLEXBOX: Space between image and text */
     margin-bottom: 2rem;
     background-color: white;
     padding: 2rem;
@@ -70,6 +73,26 @@ nav a:hover {
     line-height: 1.8;
 }
 
+/* ===== MAIN LAYOUT CONTAINER ===== */
+/* GRID USAGE: Main page layout - 2D layout (sidebar + main content) */
+.container {
+    display: grid; /* 🎯 GRID: Turns container into grid layout */
+    grid-template-columns: 30% 65%; /* 🎯 GRID: Defines 2 columns: 30% and 65% wide */
+    gap: 5%; /* 🎯 GRID: Space between grid items */
+    margin-bottom: 2rem;
+}
+
+/* GRID USAGE: Placing items in specific grid cells */
+main {
+    grid-column: 2; /* 🎯 GRID: Places main in second column */
+}
+
+aside {
+    grid-column: 1; /* 🎯 GRID: Places aside in first column */
+    grid-row: 1; /* 🎯 GRID: Places aside in first row */
+}
+
+/* ===== CONTENT BOXES ===== */
 .box {
     background-color: white;
     padding: 1.5rem;
@@ -99,17 +122,7 @@ nav a:hover {
     color: #3498db;
 }
 
-/* Layout for main and aside */
-main {
-    float: left;
-    width: 65%;
-}
-
-aside {
-    float: right;
-    width: 30%;
-}
-
+/* ===== SIDEBAR IMAGES ===== */
 aside img {
     width: 100%;
     height: auto;
@@ -117,15 +130,8 @@ aside img {
     margin-bottom: 1rem;
 }
 
-/* Clearfix */
-main::after, .container::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
+/* ===== FOOTER ===== */
 footer {
-    clear: both;
     text-align: center;
     padding: 2rem;
     background-color: #2c3e50;
@@ -134,3 +140,27 @@ footer {
     margin-top: 2rem;
 }
 
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    /* FLEXBOX: Stack navigation vertically on mobile */
+    nav {
+        flex-direction: column; /* 🎯 FLEXBOX: Changes from row to column */
+        gap: 1rem;
+    }
+    
+    /* FLEXBOX: Stack profile image and text on mobile */
+    .profile-box {
+        flex-direction: column; /* 🎯 FLEXBOX: Stacks items vertically */
+        text-align: center;
+    }
+    
+    /* GRID: Switch to single column layout on mobile */
+    .container {
+        grid-template-columns: 1fr; /* 🎯 GRID: Single column layout */
+    }
+    
+    /* GRID: Reset grid placement for mobile */
+    main, aside {
+        grid-column: 1; /* 🎯 GRID: Both in first column */
+    }
+}
