@@ -18,7 +18,7 @@ body {
 /* ===== HEADER & NAVIGATION ===== */
 header {
     background-color: #2c3e50;
-    padding: 1rem 2rem;
+    padding: 3rem 3rem;
     margin-bottom: 2rem;
     border-radius: 35px;
     grid-template-columns: auto 1fr;
