@@ -156,19 +156,56 @@ p, section, article {
   color: var(--primary-color);
 }
 
-/* 🎯 FOOTER - Using Flexbox */
+/* 🎯 FOOTER NAVIGATION STYLES */
+.footer-nav {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.25rem 0.5rem;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+    color: var(--accent1-color);
+}
+
+/* 🎯 UPDATE FOOTER LAYOUT */
 footer {
-  display: flex; /* 🎯 Flexbox for footer layout */
-  justify-content: space-between; /* 🎯 Copyright left | Social media right */
-  align-items: center; /* 🎯 Vertically center items */
-  padding: 1rem;
-  background-color: var(--primary-color);
-  color: white;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    grid-column: 1;
+    text-align: left;
+}
+
+.footer-nav {
+    grid-column: 2;
 }
 
 .socialmedia {
-  display: flex; /* 🎯 Flexbox for social media icons */
-  gap: 1rem; /* 🎯 Space between social icons */
+    grid-column: 3;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.socialmedia {
+  display: flex; 
+  gap: 1rem; 
 }
 
 .socialmedia a {
