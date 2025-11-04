@@ -1,55 +1,103 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About White Water Rafting Company - our history and mission">
-    <meta name="author" content="Wisdom Muke">
-    <title>About Us - White Water Rafting</title>
+    <title>White Water Rafting - About Us</title>
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
+    <!-- 🎯 HEADER WITH GRID LAYOUT -->
     <header>
-        <img src="images/logo.png" alt="Rafting Company Logo">
+        <div class="logo">
+            <img src="images/logo.png" alt="Rafting Company Logo">
+        </div>
         <nav>
             <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
+            <a href="about.html">About</a>
             <a href="trips.html">Trips</a>
-            <a href="contact.html">Contact Us</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
     <main>
-        <!-- Hero section with background image -->
+        <!-- 🎯 HERO SECTION -->
         <div class="hero">
             <img src="images/hero.jpg" alt="Rafting adventure">
-            <h1>White Water Rafting Company</h1>
+            <h1>White Water Rafting Adventures</h1>
             <article>
-                <img src="images/happy-client.jpg" alt="Happy customer">
-                <p>Our mission is to provide safe and exciting rafting adventures for everyone!</p>
+                <img src="images/happy-client.jpg" alt="Happy client">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit
+                    amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
             </article>
         </div>
 
-        <section>
-            <h2>History</h2>
-            <p>We started in 1995 as a small family business and have grown into a trusted rafting company.</p>
+        <!-- 🎯 HISTORY SECTION WITH GRID LAYOUT -->
+        <section class="history-section">
+            <div class="history-text-left">
+                <h2>Our Humble Beginnings</h2>
+                <p>Founded in 1995, our company started with just two rafts and a dream. We believed that everyone
+                    should experience the thrill of white water rafting in a safe, professional environment. Our
+                    founders, John and Sarah Rivers, spent their first season guiding small groups down the local
+                    rapids, sharing their passion for adventure and nature.</p>
+            </div>
+            <div class="history-image">
+                <img src="images/history.jpg" alt="Our early days">
+            </div>
+            <div class="history-text-right">
+                <h2>Growing Strong</h2>
+                <p>Today, we operate across multiple rivers with state-of-the-art equipment and certified guides. Our
+                    commitment to safety and customer satisfaction has made us the leading rafting company in the
+                    region. We continue to innovate while staying true to our roots - providing unforgettable adventures
+                    on the water.</p>
+            </div>
         </section>
 
-        <!-- Will add adventure images later -->
-        <section>
+        <!-- 🎯 ADVENTURES SECTION WITH FLEXBOX GALLERY -->
+        <section class="adventures-section">
             <h2>Adventure Awaits You!</h2>
+            <div class="adventures-gallery">
+                <!-- 🎯 5 FIGURE ELEMENTS AS REQUIRED -->
+                <figure>
+                    <img src="images/adventure1.jpg" alt="Los Dientes del Diablo rapid">
+                    <figcaption>Los Dientes del Diablo</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/adventure2.jpg" alt="Big Mallard rapid">
+                    <figcaption>Big Mallard</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/adventure3.jpg" alt="Half Day Adventure">
+                    <figcaption>Half Day Adventure</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/adventure4.jpg" alt="Devil's Throat">
+                    <figcaption>Devil's Throat</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/adventure5.jpg" alt="Sunset Rapids">
+                    <figcaption>Sunset Rapids</figcaption>
+                </figure>
+            </div>
         </section>
     </main>
 
+    <!-- 🎯 FOOTER WITH SOCIAL MEDIA -->
     <footer>
-        <p>©2025 White Water Rafting Company | Wisdom Muke</p>
-        <nav class="socialmedia">
-            <a href="https://facebook.com"><img src="images/facebook.svg" alt="Facebook"></a>
-            <a href="https://twitter.com"><img src="images/twitter.svg" alt="Twitter"></a>
-            <a href="https://instagram.com"><img src="images/instagram.svg" alt="Instagram"></a>
-        </nav>
+        <p>&copy; 2025 White Water Rafting Adventures</p>
+        <div class="socialmedia">
+            <a href="https://facebook.com">
+                <img src="images/facebook.svg" alt="Facebook">
+            </a>
+            <a href="https://twitter.com">
+                <img src="images/twitter.svg" alt="Twitter">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/instagram.svg" alt="Instagram">
+            </a>
+        </div>
     </footer>
 </body>
 
