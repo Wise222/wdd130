@@ -1,5 +1,5 @@
-/* Reset and Base Styles */
-* {
+/* Universal Selector Reset */
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -92,22 +92,23 @@ nav a:hover {
     background-color: rgba(255, 255, 255, 0.95);
     padding: 1rem;
     border-radius: 8px;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
 }
 
-.article-img {
+/* FIX: Hero article image with float: right */
+.hero article img {
+    float: right;
     width: 120px;
     height: 120px;
     object-fit: cover;
     border-radius: 4px;
-    flex-shrink: 0;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .hero article p {
     margin: 0;
     line-height: 1.5;
+    text-align: left;
 }
 
 /* HISTORY SECTION - Using CSS Grid */
@@ -198,22 +199,23 @@ footer p {
     margin: 0;
 }
 
-.sociallinks {
+/* FIX: Social media nav with correct class name */
+.socialmedia {
     display: flex;
     gap: 1rem;
 }
 
-.sociallinks a {
+.socialmedia a {
     text-decoration: none;
 }
 
-.sociallinks img {
+.socialmedia img {
     width: 30px;
     height: 30px;
     transition: transform 0.3s;
 }
 
-.sociallinks img:hover {
+.socialmedia img:hover {
     transform: scale(1.1);
 }
 
