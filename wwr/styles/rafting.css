@@ -1,17 +1,19 @@
-/* Universal Selector Reset */
+/* Reset all elements to consistent baseline */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* CSS variables for consistent theming */
 :root {
     --primary-color: #2c3e50;
-    --accent-color: #e74c3c;
+    --accent-color: #c0392b;
     --text-color: #333;
     --background-color: #f8f9fa;
 }
 
+/* Base body styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -22,7 +24,7 @@ body {
     padding: 20px;
 }
 
-/* HEADER - Using CSS Grid */
+/* Header layout using CSS Grid - logo left, navigation right */
 header {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -32,6 +34,7 @@ header {
     background-color: var(--primary-color);
     border-radius: 8px;
     margin-bottom: 2rem;
+    color: white;
 }
 
 .logo {
@@ -39,7 +42,7 @@ header {
     height: auto;
 }
 
-/* NAVIGATION - Using Flexbox */
+/* Navigation using Flexbox for horizontal layout */
 nav {
     display: flex;
     justify-content: flex-end;
@@ -58,7 +61,7 @@ nav a:hover {
     background-color: var(--accent-color);
 }
 
-/* HERO SECTION */
+/* Hero section with overlay text */
 .hero {
     position: relative;
     margin-bottom: 2rem;
@@ -94,7 +97,6 @@ nav a:hover {
     border-radius: 8px;
 }
 
-/* FIX: Hero article image with float: right */
 .hero article img {
     float: right;
     width: 120px;
@@ -111,7 +113,7 @@ nav a:hover {
     text-align: left;
 }
 
-/* HISTORY SECTION - Using CSS Grid */
+/* History section with 3-column grid layout */
 .history {
     background-color: white;
     padding: 2rem;
@@ -145,7 +147,7 @@ nav a:hover {
     border-radius: 8px;
 }
 
-/* ADVENTURES SECTION - Using Flexbox */
+/* Adventures gallery using Flexbox for horizontal layout */
 .adventures {
     background-color: white;
     padding: 2rem;
@@ -184,7 +186,7 @@ nav a:hover {
     color: var(--primary-color);
 }
 
-/* FOOTER - Using Flexbox */
+/* Footer layout with Flexbox */
 footer {
     display: flex;
     justify-content: space-between;
@@ -199,7 +201,6 @@ footer p {
     margin: 0;
 }
 
-/* FIX: Social media nav with correct class name */
 .socialmedia {
     display: flex;
     gap: 1rem;
@@ -219,10 +220,9 @@ footer p {
     transform: scale(1.1);
 }
 
-/* CONTACT PAGE SPECIFIC STYLES */
-
+/* Contact page specific styles */
 .contact-hero {
-    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.9)), 
+    background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.95)), 
                 url('images/contact-hero.jpg') center/cover;
     color: white;
     text-align: center;
@@ -247,7 +247,7 @@ footer p {
     padding: 0 20px;
 }
 
-/* Company Information Section */
+/* Company information section */
 .company-info {
     background: white;
     padding: 2rem;
@@ -273,7 +273,6 @@ footer p {
     font-style: normal;
 }
 
-/* FIX: Responsive iframe styling */
 .map-container {
     position: relative;
     width: 100%;
@@ -286,7 +285,7 @@ footer p {
     border-radius: 8px;
 }
 
-/* Employee Profiles Section */
+/* Employee profiles section */
 .employee-profiles {
     background: white;
     padding: 2rem;
@@ -320,7 +319,7 @@ footer p {
     line-height: 1.4;
 }
 
-/* Contact Form Section */
+/* Contact form styling */
 .contact-form-section {
     background: white;
     padding: 2rem;
@@ -389,7 +388,7 @@ footer p {
 }
 
 .submit-btn {
-    background-color: var(--accent-color);
+    background-color: #c0392b;
     color: white;
     padding: 1rem 2rem;
     border: none;
@@ -402,10 +401,10 @@ footer p {
 }
 
 .submit-btn:hover {
-    background-color: #c0392b;
+    background-color: #a93226;
 }
 
-/* Responsive Design */
+/* Mobile responsive design */
 @media (max-width: 768px) {
     header {
         grid-template-columns: 1fr;
@@ -438,7 +437,7 @@ footer p {
         text-align: center;
     }
 
-    /* Contact Page Mobile Responsive */
+    /* Contact page mobile adjustments */
     .info-grid {
         grid-template-columns: 1fr;
     }
@@ -458,7 +457,6 @@ footer p {
         padding: 1.5rem;
     }
     
-    /* Mobile iframe adjustments */
     .map-container iframe {
         height: 250px;
     }
