@@ -13,7 +13,7 @@
 
 <body>
     <header>
-        <img src="images/logo.png" alt="Rafting Site Logo" class="logo">
+        <img src="images/logo.png" alt="White Water Rafting Adventures Logo" class="logo">
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
@@ -50,7 +50,8 @@
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1528227.741125867!2d-107.5!3d38.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x874014749b1656c7%3A0x5f14c35b95727438!2sColorado%20River!5e0!3m2!1sen!2sus!4v1234567890123"
                             width="800" height="300" allowfullscreen loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade" title="White Water Rafting Adventures Location">
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="White Water Rafting Adventures Location Map - 123 River Road, Adventure Valley, CO">
                         </iframe>
                     </div>
                 </div>
@@ -61,21 +62,24 @@
                 <h2>Meet Our Team</h2>
                 <div class="employees-grid">
                     <figure class="employee">
-                        <img src="images/employee1.jpg" alt="Paulo Rodrigues - Head Guide">
+                        <img src="images/employee1.jpg"
+                            alt="Paulo Rodrigues - Head Guide and Safety Director with 10 years of rafting experience">
                         <figcaption>
                             <strong>Paulo Rodrigues</strong><br>
                             Head Guide & Safety Director
                         </figcaption>
                     </figure>
                     <figure class="employee">
-                        <img src="images/employee2.jpg" alt="Sarah Johnson - Trip Coordinator">
+                        <img src="images/employee2.jpg"
+                            alt="Sarah Johnson - Trip Coordinator helping plan your perfect rafting adventure">
                         <figcaption>
                             <strong>Sarah Johnson</strong><br>
                             Trip Coordinator
                         </figcaption>
                     </figure>
                     <figure class="employee">
-                        <img src="images/employee3.jpg" alt="Emily Chen - Customer Service Manager">
+                        <img src="images/employee3.jpg"
+                            alt="Emily Chen - Customer Service Manager ready to assist with your questions">
                         <figcaption>
                             <strong>Emily Chen</strong><br>
                             Customer Service Manager
@@ -90,16 +94,16 @@
                 <form class="contact-form" action="https://httpbin.org/post" method="POST">
                     <div class="form-group">
                         <label for="name">Your Name:</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" required aria-required="true">
                     </div>
 
                     <div class="form-group">
                         <label for="email">Your Email:</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" required aria-required="true">
                     </div>
 
                     <div class="form-group">
-                        <label>Purpose of Message:</label>
+                        <legend>Purpose of Message:</legend>
                         <div class="radio-group">
                             <label class="radio-option">
                                 <input type="radio" id="purpose-general" name="purpose" value="general" required>
@@ -118,7 +122,7 @@
 
                     <div class="form-group">
                         <label for="message">Your Message:</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
                     </div>
 
                     <div class="form-group checkbox-group">
@@ -136,15 +140,15 @@
 
     <footer>
         <p>&copy; 2025 White Water Rafting Adventures | Wisdom Muke</p>
-        <nav class="socialmedia">
+        <nav class="socialmedia" aria-label="Social media links">
             <a href="https://facebook.com">
-                <img src="images/facebook.svg" alt="Facebook">
+                <img src="images/facebook.svg" alt="Visit our Facebook page">
             </a>
             <a href="https://twitter.com">
-                <img src="images/twitter.svg" alt="Twitter">
+                <img src="images/twitter.svg" alt="Follow us on Twitter">
             </a>
             <a href="https://instagram.com">
-                <img src="images/instagram.svg" alt="Instagram">
+                <img src="images/instagram.svg" alt="Follow us on Instagram">
             </a>
         </nav>
     </footer>
