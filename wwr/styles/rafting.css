@@ -1,3 +1,18 @@
+/* === CRITICAL FIXES ADDED === */
+/* 1. FIX HEADER CONTRAST VIOLATION */
+header nav a {
+    color: rgb(255, 255, 255) !important;
+}
+
+header nav a:hover {
+    color: rgb(160, 196, 255) !important;
+}
+
+/* 2. FIX CONTACT HERO IMAGE PATH */
+.contact-hero {
+    background-image: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('../images/contact-hero.jpg');
+}
+
 /* CSS Variables for consistent theming */
 :root {
     --text: rgb(51, 51, 51);
@@ -23,7 +38,7 @@ body {
     background-color: var(--white);
 }
 
-/* Header Styles - FIXED CONTRAST */
+/* Header Styles */
 header {
     background-color: var(--primary);
     padding: 1rem 2rem;
@@ -43,26 +58,23 @@ nav {
     gap: 2rem;
 }
 
-/* FIXED: Header navigation contrast - ensure white text */
-header nav a {
+nav a {
     color: var(--white);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
-header nav a:hover {
+nav a:hover {
     color: var(--link-hover);
 }
 
-/* Contact Hero Section - FIXED IMAGE PATH */
+/* Contact Hero Section */
 .contact-hero {
     background-color: var(--primary);
     color: var(--white);
     padding: 4rem 2rem;
     text-align: center;
-    /* FIXED: Correct image path for your structure */
-    background-image: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('../images/contact-hero.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
