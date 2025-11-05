@@ -88,7 +88,7 @@
                 </div>
             </section>
 
-            <!-- Contact Form Section -->
+            <!-- Contact Form Section - FIXED LEGEND ERROR -->
             <section class="contact-form-section">
                 <h2>Send Us a Message</h2>
                 <form class="contact-form" action="https://httpbin.org/post" method="POST">
@@ -102,22 +102,25 @@
                         <input type="email" id="email" name="email" required aria-required="true">
                     </div>
 
+                    <!-- FIXED: Replaced legend with proper fieldset structure -->
                     <div class="form-group">
-                        <legend>Purpose of Message:</legend>
-                        <div class="radio-group">
-                            <label class="radio-option">
-                                <input type="radio" id="purpose-general" name="purpose" value="general" required>
-                                General Inquiry
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" id="purpose-reservation" name="purpose" value="reservation">
-                                Reservation Question
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" id="purpose-suggestion" name="purpose" value="suggestion">
-                                Website Suggestion
-                            </label>
-                        </div>
+                        <fieldset>
+                            <legend>Purpose of Message:</legend>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" id="purpose-general" name="purpose" value="general" required>
+                                    General Inquiry
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" id="purpose-reservation" name="purpose" value="reservation">
+                                    Reservation Question
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" id="purpose-suggestion" name="purpose" value="suggestion">
+                                    Website Suggestion
+                                </label>
+                            </div>
+                        </fieldset>
                     </div>
 
                     <div class="form-group">

@@ -6,6 +6,7 @@
     --light-bg: rgb(248, 249, 250);
     --accent: rgb(192, 57, 43);
     --black: rgb(0, 0, 0);
+    --link-hover: rgb(160, 196, 255);
 }
 
 /* Reset and base styles */
@@ -22,7 +23,7 @@ body {
     background-color: var(--white);
 }
 
-/* Header Styles */
+/* Header Styles - FIXED CONTRAST */
 header {
     background-color: var(--primary);
     padding: 1rem 2rem;
@@ -43,14 +44,14 @@ nav {
 }
 
 nav a {
-    color: var(--white);
+    color: var(--white); /* Fixed: Ensure white text on dark background */
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #a0c4ff;
+    color: var(--link-hover);
 }
 
 /* Contact Hero Section - FIXED CONTRAST */
