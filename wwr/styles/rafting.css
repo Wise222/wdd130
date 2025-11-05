@@ -1,37 +1,42 @@
-/* CSS Variables for consistent theming */
-:root {
-    --text: rgb(51, 51, 51);
-    --primary: rgb(44, 62, 80);
-    --white: rgb(255, 255, 255);
-    --light-bg: rgb(248, 249, 250);
-    --accent: rgb(192, 57, 43);
-    --black: rgb(0, 0, 0);
-    --link-hover: rgb(160, 196, 255);
-}
-
-/* Reset and base styles */
+/* === EMERGENCY FIX - COMPLETE CSS RESET === */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* FORCE HEADER WHITE TEXT - NO EXCEPTIONS */
+header,
+header *,
+header nav,
+header nav a,
+header nav *,
+nav,
+nav a,
+nav * {
+    color: rgb(255, 255, 255) !important;
+}
+
+header a:hover,
+header nav a:hover,
+nav a:hover {
+    color: rgb(160, 196, 255) !important;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: var(--text);
-    background-color: var(--white);
+    color: rgb(51, 51, 51);
+    background-color: rgb(255, 255, 255);
 }
 
-/* Header Styles - FIXED CONTRAST */
 header {
-    background-color: var(--primary);
+    background-color: rgb(44, 62, 80);
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    color: var(--white); /* Force white text throughout header */
 }
 
 .logo {
@@ -39,36 +44,19 @@ header {
     width: auto;
 }
 
-header nav {
+nav {
     display: flex;
     gap: 2rem;
 }
 
-/* CRITICAL FIX: Force white text with high specificity */
-header nav a,
-header a,
-header * {
-    color: var(--white) !important;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-header nav a:hover,
-header a:hover {
-    color: var(--link-hover) !important;
-}
-
-/* Contact Hero Section - FIXED IMAGE PATH */
 .contact-hero {
-    background-color: var(--primary);
-    color: var(--white);
+    background-color: rgb(44, 62, 80);
+    color: rgb(255, 255, 255);
     padding: 4rem 2rem;
     text-align: center;
-    background-image: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url("/images/contact-hero");
+    background-image: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('images/contact-hero.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     min-height: 400px;
     display: flex;
     flex-direction: column;
@@ -79,32 +67,23 @@ header a:hover {
 .contact-hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: var(--white);
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    color: rgb(255, 255, 255);
 }
 
 .contact-hero p {
     font-size: 1.2rem;
-    opacity: 0.95;
-    color: var(--white);
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    color: rgb(255, 255, 255);
     max-width: 600px;
 }
 
-/* Contact Container */
 .contact-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
 }
 
-/* Company Info Section */
-.company-info {
-    margin-bottom: 3rem;
-}
-
 .company-info h2 {
-    color: var(--primary);
+    color: rgb(44, 62, 80);
     margin-bottom: 1.5rem;
     font-size: 2rem;
 }
@@ -113,19 +92,13 @@ header a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    align-items: start;
 }
 
 .contact-details h3 {
-    color: var(--primary);
+    color: rgb(44, 62, 80);
     margin-bottom: 1rem;
 }
 
-.contact-details address p {
-    margin-bottom: 0.5rem;
-}
-
-/* Map Container */
 .map-container {
     border-radius: 8px;
     overflow: hidden;
@@ -137,13 +110,8 @@ header a:hover {
     border: none;
 }
 
-/* Employee Profiles */
-.employee-profiles {
-    margin-bottom: 3rem;
-}
-
 .employee-profiles h2 {
-    color: var(--primary);
+    color: rgb(44, 62, 80);
     margin-bottom: 1.5rem;
     font-size: 2rem;
 }
@@ -156,14 +124,9 @@ header a:hover {
 
 .employee {
     text-align: center;
-    background: var(--light-bg);
+    background: rgb(248, 249, 250);
     padding: 1.5rem;
     border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.employee:hover {
-    transform: translateY(-5px);
 }
 
 .employee img {
@@ -174,23 +137,14 @@ header a:hover {
     margin-bottom: 1rem;
 }
 
-.employee figcaption {
-    color: var(--text);
-}
-
-.employee strong {
-    color: var(--primary);
-}
-
-/* Contact Form */
 .contact-form-section {
-    background: var(--light-bg);
+    background: rgb(248, 249, 250);
     padding: 2rem;
     border-radius: 8px;
 }
 
 .contact-form-section h2 {
-    color: var(--primary);
+    color: rgb(44, 62, 80);
     margin-bottom: 1.5rem;
     font-size: 2rem;
 }
@@ -203,7 +157,6 @@ header a:hover {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
-    color: var(--text);
 }
 
 .form-group input[type="text"],
@@ -214,13 +167,6 @@ header a:hover {
     border: 2px solid #ddd;
     border-radius: 4px;
     font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary);
 }
 
 .radio-group,
@@ -235,58 +181,25 @@ header a:hover {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    cursor: pointer;
 }
 
-.radio-option input[type="radio"],
-.checkbox-option input[type="checkbox"] {
-    margin-right: 0.5rem;
-}
-
-/* Fieldset styling */
-fieldset {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 1rem;
-    margin: 0;
-}
-
-legend {
-    font-weight: 600;
-    color: var(--text);
-    padding: 0 0.5rem;
-}
-
-/* Submit Button */
 .submit-btn {
-    background-color: var(--accent);
-    color: var(--white);
+    background-color: rgb(192, 57, 43);
+    color: rgb(255, 255, 255);
     padding: 1rem 2rem;
     border: none;
     border-radius: 4px;
     font-size: 1.1rem;
     font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
     width: 100%;
 }
 
-.submit-btn:hover {
-    background-color: #c0392b;
-}
-
-/* Footer */
 footer {
-    background-color: var(--primary);
-    color: var(--white);
+    background-color: rgb(44, 62, 80);
+    color: rgb(255, 255, 255);
     padding: 2rem;
     text-align: center;
     margin-top: 3rem;
-}
-
-footer p {
-    color: var(--white);
-    margin-bottom: 1rem;
 }
 
 .socialmedia {
@@ -296,59 +209,21 @@ footer p {
     margin-top: 1rem;
 }
 
-.socialmedia a {
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
-
-.socialmedia a:hover {
-    transform: scale(1.1);
-}
-
 .socialmedia img {
     width: 30px;
     height: 30px;
     filter: brightness(0) invert(1);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .info-grid {
         grid-template-columns: 1fr;
     }
-    
-    .contact-hero {
-        padding: 3rem 1rem;
-        min-height: 300px;
-    }
-    
-    .contact-hero h1 {
-        font-size: 2rem;
-    }
-    
-    .contact-hero p {
-        font-size: 1rem;
-    }
-    
     header {
         flex-direction: column;
         gap: 1rem;
     }
-    
     nav {
         gap: 1rem;
     }
-    
-    .contact-container {
-        padding: 1rem;
-    }
-}
-
-/* Focus styles for better accessibility */
-nav a:focus,
-.submit-btn:focus,
-input:focus,
-textarea:focus {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
 }
